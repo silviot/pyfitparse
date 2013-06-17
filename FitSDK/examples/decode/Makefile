@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -I../../ -I./
+CFLAGS = -m32 -I../../ -I./
 
 decode: decode.o fit.o fit_convert.o fit_crc.o fit_product.o
 	$(CC) $(CFLAGS) -o decode decode.o fit.o fit_convert.o fit_crc.o fit_product.o
