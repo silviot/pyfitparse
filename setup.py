@@ -23,4 +23,5 @@ setup(
     description='pyfitparse',
     long_description=README,
     cmdclass = {'test': PyTest},
+    packages=['pyfitparse'],
 )
