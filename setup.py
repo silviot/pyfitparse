@@ -22,6 +22,6 @@ setup(
     version='0.1',
     description='pyfitparse',
     long_description=README,
-    cmdclass = {'test': PyTest},
-    packages=['pyfitparse'],
+    cmdclass={'test': PyTest},
+    packages=['pyfitparse', 'activityextractor'],
 )
