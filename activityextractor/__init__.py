@@ -27,7 +27,6 @@ def extract_from_fit(file_handler):
 
     for record in records:
         d = {}
-
         # get the list of valid fields on this record
         valid_field_names = record.get_valid_field_names()
 
@@ -46,5 +45,4 @@ def extract_from_fit(file_handler):
             d[field_name] = {'data': field_data, 'units': field_units}
 
         out.append(d)
-
     return out
