@@ -30,7 +30,8 @@ class FitFile(object):
 
         # Private: call FitFile._read(), don't read from this. Important for CRC.
         self._file = f
-        self._file_size = os.path.getsize(f.name)
+        self._file_size = len(f.read())
+        f.seek(0)
         self._data_read = 0
         self._crc = 0
 
