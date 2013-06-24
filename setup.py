@@ -11,7 +11,7 @@ class PyTest(Command):
         pass
     def run(self):
         import sys,subprocess
-        errno = subprocess.call([sys.executable, 'runtests.py'])
+        errno = subprocess.call([sys.executable, 'runtests.py', 'activityextractor'])
         raise SystemExit(errno)
 
 here = os.path.abspath(os.path.dirname(__file__))
@@ -24,4 +24,5 @@ setup(
     long_description=README,
     cmdclass={'test': PyTest},
     packages=['pyfitparse', 'activityextractor'],
+    install_requires=['pytz'],
 )
