@@ -23,6 +23,6 @@ setup(
     description='pyfitparse',
     long_description=README,
     cmdclass={'test': PyTest},
-    packages=['pyfitparse', 'activityextractor'],
+    packages=['fitparse', 'activityextractor'],
     install_requires=['pytz'],
 )

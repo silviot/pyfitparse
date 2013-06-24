@@ -67,7 +67,8 @@ def extract_from_fit(fh):
 
         # TODO this requires more investigation:
         # The fit format uses UTC timestamp from 1/1/1990 epoch but
-        # we need to be sure it makes it to us without being misinterpreted
+        # we need to be sure it makes it to us through the pyfitparse code
+        # without being misinterpreted
 
         # For now we assume the value is correct and just needs a UTC tzinfo
         converted['start_time'] = UTC.localize(activity['timestamp']['data'])
