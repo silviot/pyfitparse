@@ -1,6 +1,5 @@
-import os
 from setuptools import setup
-from distutils.core import Command
+import os
 
 
 here = os.path.abspath(os.path.dirname(__file__))
@@ -13,4 +12,5 @@ setup(
     long_description=README,
     packages=['fitparse'],
     install_requires=['pytz'],
+    include_package_data=True,
 )

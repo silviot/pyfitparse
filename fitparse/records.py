@@ -2,7 +2,7 @@ from collections import namedtuple
 from pytz import UTC
 import datetime
 import math
-import os
+import pkg_resources
 
 
 RECORD_HEADER_NORMAL = 0
@@ -317,4 +317,4 @@ def _convert_activity_class(raw_data):
 try:
     execfile('profile.def')
 except IOError:
-    execfile(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'profile.def'))
+    execfile(pkg_resources.resource_filename('fitparse', 'profile.def'))
