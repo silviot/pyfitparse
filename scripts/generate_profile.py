@@ -281,7 +281,7 @@ def autogen_python(types, fields):
         # <PAD> case
         if not fields.has_key(msg_name):
             continue
-			
+
         writeln("MessageType(%s, %s, {" % (msg_num, repr(msg_name)))
 
         msg_fields = fields[msg_name]
